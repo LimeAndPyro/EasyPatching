@@ -19,7 +19,9 @@ Post Method Patch = EasyPatchMethodPost Patches a Method And its Func After the 
 
 PrePost Method Patch
 ![Prepost Method Code](https://i.imgur.com/oybkPbD.png)
+
       public static void Patch()
-        {
-            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPre");
-        }
+             {
+                 EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPost");
+             }
+       
