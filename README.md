@@ -7,10 +7,19 @@ if used throw a note with my discord name in the code :)
 
 ![Example Code](https://i.imgur.com/XlgJtun.png)
 
-HOW TO USE
+Method Patches = Patches into specific method For example class Deeznuts is the typeof(deeznuts) and the methodname lets say is "inyourmom".
+
+Post Method Patch = EasyPatchMethodPost Patches a Method And its Func After the Orig Func Is ran.
+![Post Method Code](https://i.imgur.com/LDqrniE.png)
 
      public static void Patch()
         {
-            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrival");
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPost");
         }
-            
+
+PrePost Method Patch
+![Prepost Method Code](https://i.imgur.com/oybkPbD.png)
+      public static void Patch()
+        {
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPre");
+        }
