@@ -15,7 +15,7 @@ Post Method Patch = EasyPatchMethodPost Patches a Method And its Func After the 
 
      public static void Patch()
         {
-            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPost");
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnArrivalPost");
         }
 
 PrePost Method Patch = EasyPatchPropertyPre Patches A Property Before The Original Func is Ran.
@@ -24,7 +24,7 @@ PrePost Method Patch = EasyPatchPropertyPre Patches A Property Before The Origin
 
       public static void Patch()
              {
-                 EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrivalPost");
+                 EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnArrivalPost");
              }
 Output Function = The Function which you run your own code that will either run before or after the original code.
 
