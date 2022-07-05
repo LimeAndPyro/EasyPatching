@@ -12,13 +12,19 @@ namespace Discreet.SDK.Patching
     {
         public static void Patch()
         {
-            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnArrival");
+            
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnArrival");
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnDeparture");
             EasyPatching.EasyPatchPropertyPre(typeof(PhotonPeer), "ServerAddress", typeof(PlayerPatches), "GetAddress");
         }
             
         public static void OnArrival(VRC.Player param_1)
         {   
             Console.WriteLine($"{param_1.prop_APIUser_0.displayName} Has Joined The Lobby");
+        }
+        public static void OnDeparture(VRC.Player parem_1)
+        {
+            Console.WriteLine($"{parem_1.prop_APIUser_0.displayName} Left The Lobby");
         }
 
         //note this is a dummy func i dont know if it will work lmao
