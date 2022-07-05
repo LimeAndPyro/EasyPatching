@@ -14,7 +14,7 @@ namespace Discreet.SDK.Patching
         {
             
             EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnArrival");
-            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_1", typeof(PlayerPatches), "OnDeparture");
+            EasyPatching.EasyPatchMethodPost(typeof(NetworkManager), "Method_Public_Void_Player_0", typeof(PlayerPatches), "OnDeparture");
             EasyPatching.EasyPatchPropertyPre(typeof(PhotonPeer), "ServerAddress", typeof(PlayerPatches), "GetAddress");
         }
             
