@@ -63,4 +63,6 @@ IMPORTANT NOTES
 
 Thank you for Checking out my repo Much love.
 
+EDIT(I accidentally got the wrong method for onplayer join it fixed now tho)
+
        
