@@ -24,7 +24,7 @@ namespace Discreet.SDK.Patching
         }
         public static void OnDeparture(VRC.Player parem_1)
         {
-            Console.WriteLine($"{parem_1.prop_APIUser_0.displayName} Left The Lobby");
+            Console.WriteLine($"{param_1.prop_APIUser_0.displayName} Left The Lobby");
         }
 
         //note this is a dummy func i dont know if it will work lmao
