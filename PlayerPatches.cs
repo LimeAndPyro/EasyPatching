@@ -18,11 +18,11 @@ namespace Discreet.SDK.Patching
             EasyPatching.EasyPatchPropertyPre(typeof(PhotonPeer), "ServerAddress", typeof(PlayerPatches), "GetAddress");
         }
             
-        public static void OnArrival(VRC.Player param_1)
+        public static void OnArrival(VRC.Player __0)
         {   
             Console.WriteLine($"{param_1.prop_APIUser_0.displayName} Has Joined The Lobby");
         }
-        public static void OnDeparture(VRC.Player parem_1)
+        public static void OnDeparture(VRC.Player __0)
         {
             Console.WriteLine($"{param_1.prop_APIUser_0.displayName} Has Left The Lobby");
         }
