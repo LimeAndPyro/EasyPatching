@@ -21,13 +21,13 @@ namespace Discreet.SDK.Patching
         //EasyPatchPropertyPost Patches A Property After The Original Func is Ran
         public static void EasyPatchPropertyPost(Type inputclass, string InputMethodName, Type outputclass, string outputmethodname) 
         {
-            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetMethod, null, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
+            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetGetMethod, null, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
         }
 
         //EasyPatchPropertyPre Patches A Property Before The Original Func is Ran
         public static void EasyPatchPropertyPre(Type inputclass, string InputMethodName, Type outputclass, string outputmethodname)
         {
-            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetMethod, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
+            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetGetMethod, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
         }
 
         //patches into specific method For example class Deeznuts is the typeof(deeznuts) and the methodname lets say is "inyourmom".
