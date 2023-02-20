@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Harmony;
+using static MelonLoader.MelonLogger;
 
 namespace Discreet.SDK.Patching
 {
@@ -15,19 +17,23 @@ namespace Discreet.SDK.Patching
         //HARMONY WILL ALWAYS NEED A INSTANCE TO PATCH!!!!
 
     }
+    
     public class EasyPatching
     {
+
         //Patches into a specific property Such as float, int, etc.
         //EasyPatchPropertyPost Patches A Property After The Original Func is Ran
-        public static void EasyPatchPropertyPost(Type inputclass, string InputMethodName, Type outputclass, string outputmethodname) 
+        [Obsolete]
+        public static void EasyPatchPropertyPost(Type inputclass, string InputMethodName, Type outputclass, string outputmethodname)
         {
-            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetGetMethod, null, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
+            PatchInstance.DiscreetInstance.Patch(AccessTools.Property(inputclass, InputMethodName).GetGetMethod(), null,  new HarmonyMethod(outputclass, outputmethodname));
         }
 
         //EasyPatchPropertyPre Patches A Property Before The Original Func is Ran
+        [Obsolete]
         public static void EasyPatchPropertyPre(Type inputclass, string InputMethodName, Type outputclass, string outputmethodname)
         {
-            PatchInstance.DiscreetInstance.Patch(HarmonyLib.AccessTools.Property(inputclass, InputMethodName).GetGetMethod, new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
+            PatchInstance.DiscreetInstance.Patch(AccessTools.Property(inputclass, InputMethodName).GetGetMethod(), new HarmonyLib.HarmonyMethod(outputclass, outputmethodname));
         }
 
         //patches into specific method For example class Deeznuts is the typeof(deeznuts) and the methodname lets say is "inyourmom".
