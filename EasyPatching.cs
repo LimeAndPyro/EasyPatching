@@ -9,7 +9,7 @@ using static MelonLoader.MelonLogger;
 
 namespace Discreet.SDK.Patching
 {
-    //Created By: Lime/Pyro/Creed#1212 :)
+    //Created By: Lime/Pyro/Creed#1212 :) //pc principle for sex
     class PatchInstance
     {
         ///Change this to whatever (DiscreetInstance) and ("Discreet Patch") can both be changed However if changed must be changed in the func too!!
